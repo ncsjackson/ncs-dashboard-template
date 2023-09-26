@@ -4,6 +4,7 @@
     --main-text-color: #46474A;
     --main-border-color: #DFDFDF;
     --primary-blue-color: #03477F;
+    --primary-hover-color: #285DA6;
     --secondary-blue-color: #0A66CD;
     --active-blue-color: #E5F0FA;
     --white-color: #FFFFFF;
@@ -230,6 +231,11 @@ ul {
     padding: 10px 15px;
     color: var(--white-color);
     background-color: var(--primary-blue-color);
+    transition: all 0.1s ease;
+}
+
+.button-primary:hover {
+    background-color: var(--primary-hover-color);
 }
 
 .button-large {
