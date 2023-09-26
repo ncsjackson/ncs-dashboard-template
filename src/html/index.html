@@ -15,43 +15,108 @@
             <li class="nav-item"><a class="nav-item-link" href="#">Profile</a></li>
         </ul>
     </nav>
-    <nav class="side-navigation">
-        <ul class="side-nav-list">
-            <li class="side-nav-item active-item"><a href="#" class="side-nav-link">Dashboard</a></li>
-            <li class="side-nav-item"><a href="#" class="side-nav-link">Searches</a></li>
-            <li class="side-nav-item"><a href="#" class="side-nav-link">Applicants</a></li>
-            <li class="side-nav-item"><a href="#" class="side-nav-link">Invoices</a></li>
-            <li class="side-nav-item"><a href="#" class="side-nav-link">Continuous Monitoring</a></li>
-            <li class="side-nav-item"><a href="#" class="side-nav-link">Bulk Uploads</a></li>
-            <li class="side-nav-item"><a href="#" class="side-nav-link">Setup New Services</a></li>
-            <li class="side-nav-item"><a href="#" class="side-nav-link">Connect Accounts</a></li>
-            <li class="side-nav-item"><a href="#" class="side-nav-link">Help Center</a></li>
-        </ul>
-    </nav>
-    <main class="main-content">
-        <div class="content-top">
-            <h1>Dashboard</h1>
-            <button class="button button-primary button-large">Start New Search</button>
-        </div>
-        <div class="widget-tiles">
-            <div class="tile green-bg">
-                <p class="tile-num">24</p>
-                <p class="tile-description">Completed Searches</p>
+    <div class="sidenav-main-wrapper">
+        <nav class="side-navigation">
+            <ul class="side-nav-list">
+                <li class="side-nav-item active-item"><a href="#" class="side-nav-link">Dashboard</a></li>
+                <li class="side-nav-item"><a href="#" class="side-nav-link">Searches</a></li>
+                <li class="side-nav-item"><a href="#" class="side-nav-link">Applicants</a></li>
+                <li class="side-nav-item"><a href="#" class="side-nav-link">Invoices</a></li>
+                <li class="side-nav-item"><a href="#" class="side-nav-link">Continuous Monitoring</a></li>
+                <li class="side-nav-item"><a href="#" class="side-nav-link">Bulk Uploads</a></li>
+                <li class="side-nav-item"><a href="#" class="side-nav-link">Setup New Services</a></li>
+                <li class="side-nav-item"><a href="#" class="side-nav-link">Connect Accounts</a></li>
+                <li class="side-nav-item"><a href="#" class="side-nav-link">Help Center</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <div class="content-top">
+                <h1>Dashboard</h1>
+                <button class="button button-primary button-large">Start New Search</button>
             </div>
-            <div class="tile yellow-bg">
-                <p class="tile-num">24</p>
-                <p class="tile-description">Completed Searches</p>
+            <div class="widget-tiles">
+                <div class="tile green-bg">
+                    <p class="tile-num">24</p>
+                    <p class="tile-description">Completed Searches</p>
+                </div>
+                <div class="tile yellow-bg">
+                    <p class="tile-num">24</p>
+                    <p class="tile-description">Completed Searches</p>
+                </div>
+                <div class="tile red-bg">
+                    <p class="tile-num">24</p>
+                    <p class="tile-description">Completed Searches</p>
+                </div>
+                <div class="tile primary-bg">
+                    <p class="tile-num">24</p>
+                    <p class="tile-description">Completed Searches</p>
+                </div>
             </div>
-            <div class="tile red-bg">
-                <p class="tile-num">24</p>
-                <p class="tile-description">Completed Searches</p>
+            <div class="wrapper bordered">
+                <nav class="tabs-navigation">
+                    <ul class="tab-list">
+                        <li class="tab-item tab-active">Searches</li>
+                        <li class="tab-item">Applicants</li>
+                    </ul>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-content-head">
+                        <h2>Recent Searches</h2>
+                    </div>
+                    <table class="table">
+                        <tr class="table-head">
+                            <th>Status</th>
+                            <th>Package Name</th>
+                            <th>Applicant</th>
+                            <th>Date Ordered</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td><span class="status transparent-green">Complete</span></td>
+                            <td>MVR Report</td>
+                            <td>Jim Lahey</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td><button class="button button-light button-action">View Search</button></td>
+                        </tr>
+                        <tr>
+                            <td><span class="status transparent-red">Review</span></td>
+                            <td>CBSV SSA ID Validation</td>
+                            <td>Jim Lahey</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td><button class="button button-light button-action">View Search</button></td>
+                        </tr>
+                        <tr>
+                            <td><span class="status transparent-green">Complete</span></td>
+                            <td>National Quick Check</td>
+                            <td>Jim Lahey</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td><button class="button button-light button-action">View Search</button></td>
+                        </tr>
+                        <tr>
+                            <td><span class="status transparent-yellow">Pending</span></td>
+                            <td>County Criminal - Manual</td>
+                            <td>Jim Lahey</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td><button class="button button-light button-action">View Search</button></td>
+                        </tr>
+                        <tr>
+                            <td><span class="status transparent-green">Complete</span></td>
+                            <td>Enhanced</td>
+                            <td>Jim Lahey</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td><button class="button button-light button-action">View Search</button></td>
+                        </tr>
+                    </table>
+                    <div class="table-footer">
+                        <p>Showing 10 of 28 searches</p>
+                        <button class="button button-primary">
+                            View All Searches
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="tile primary-bg">
-                <p class="tile-num">24</p>
-                <p class="tile-description">Completed Searches</p>
-            </div>
-        </div>
-    </main>
+        </main>
+    </div>
     <footer class="footer-navigation">
         <p>@2023 <span class="bold-500">National Crime Search</span></p>
         <ul class="footer-nav-list">

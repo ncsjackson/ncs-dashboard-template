@@ -10,6 +10,10 @@
     --yellow-orange-color: #F5B800;
     --red-color: #FF0000;
     --green-color: #31AB45;
+    --transparent-green-color: rgba(0, 128, 0, .25);
+    --transparent-red-color: rgba(255, 0, 0, .25);
+    --transparent-yellow-color: rgba(255, 165, 0, .25);
+    --gray-700-color: #7E7E7E;
     --border: 1px var(--main-border-color) solid;
 }
 
@@ -22,7 +26,7 @@
 
 html, body {
     background-color: var(--main-bg-color);
-    height: 100%;
+    min-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -35,6 +39,10 @@ a {
 
 ul {
     list-style: none;
+}
+
+.sidenav-main-wrapper {
+    position: relative;
 }
 
 .primary-navigation {
@@ -54,7 +62,7 @@ ul {
     position: absolute;
     max-width: 247px;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background-color: var(--white-color);
 }
 
@@ -66,8 +74,21 @@ ul {
 }
 
 .side-nav-item {
+    margin: 0.2rem 0;
+    width: 100%;
+}
+
+.side-nav-link {
+    display: block;
     width: 100%;
     padding: 0.8rem;
+    transition: all 0.1s ease;
+}
+
+.side-nav-link:hover{ 
+    background-color: var(--active-blue-color);
+    border-radius: 5px;
+    color: var(--secondary-blue-color);
 }
 
 .active-item {
@@ -81,7 +102,7 @@ ul {
 }
 
 .main-content {
-    height: 100%;
+    min-height: 100vh;
     margin-left: calc(1rem + 247px);
     padding: 1rem;
     background-color: var(--white-color);
@@ -90,6 +111,7 @@ ul {
 .content-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .widget-tiles {
@@ -98,7 +120,7 @@ ul {
     align-items: center;
     flex: 1;
     gap: 1.2rem;
-    margin-top: 2rem;
+    margin: 2rem 0rem;
 }
 
 .tile {
@@ -129,6 +151,7 @@ ul {
 .footer-navigation p, 
 .footer-navigation a {
     color: var(--white-color);
+    font-size: 0.8rem;
 }
 
 .footer-navigation ul {
@@ -136,7 +159,65 @@ ul {
     gap: 1.2rem;
 }
 
+.wrapper {
+    padding: 1rem;
+}
+
+.tabs-navigation {
+    border-bottom: var(--border);
+}
+
+.tabs-navigation ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.tab-item {
+    padding-bottom: 1rem;
+}
+
+.tab-active {
+    border-bottom: 3px var(--secondary-blue-color) solid;
+}
+
+.tab-content-head {
+    margin-top: 1rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.table td {
+    padding-top: 1rem;
+}
+
+.table-head th {
+    text-align: left;
+    font-weight: 500;
+    color: var(--gray-700-color);
+    padding: 1.6rem 0;
+    border-bottom: var(--border);
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: var(--border);
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.table-footer p {
+    color: var(--gray-700-color);
+}
+
 .button {
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
 }
@@ -146,16 +227,40 @@ ul {
 }
 
 .button-primary {
-    padding: 0.8rem 1.2rem;
+    padding: 10px 15px;
     color: var(--white-color);
     background-color: var(--primary-blue-color);
 }
 
 .button-large {
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.button-light {
+    padding: 5px 10px;
+    background-color: transparent;
+    border: var(--border);
+    transition: all 0.1s ease;
+}
+
+.button-light:hover {
+    background-color: var(--active-blue-color);
+    border: 1px var(--active-blue-color) solid;
+    color: var(--secondary-blue-color);
+}
+
+.button-action {
+    width: 100%;
     font-size: 1rem;
 }
 
 /* Utilities */
+.bordered {
+    border: var(--border);
+    border-radius: 5px;
+}
+
 .bold-500 {
     font-weight: 500;
 }
@@ -174,6 +279,26 @@ ul {
 
 .primary-bg {
     background-color: var(--primary-blue-color);
+}
+
+.status {
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.transparent-green {
+    background-color: var(--transparent-green-color);
+}
+
+.transparent-red {
+    background-color: var(--transparent-red-color);
+}
+
+.transparent-yellow {
+    background-color: var(--transparent-yellow-color);
 }
 
 /* Media Queries */
