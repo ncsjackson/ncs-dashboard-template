@@ -4,28 +4,31 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Responsive Navbar</title>
+	<title>NCS Client Dash</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link rel="stylesheet" href="main.css" />
 </head>
 <body>
-	<nav class="primary-navigation">
-        <ul class="nav-list">
-            <div class="mobile-toggle-container">
-                <button id="mobile-nav-toggle" class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <div class="nav-items">
-                <li class="nav-item"><a class="nav-item-link" href="#">Settings</a></li>
-                <li class="nav-item"><a class="nav-item-link" href="#">Notifications</a></li>
-                <li class="nav-item"><a class="nav-item-link" href="#">Profile</a></li>
-            </div>
-        </ul>
-    </nav>
     <div class="sidenav-main-wrapper">
+        <header>
+            <nav class="primary-navigation">
+                <ul class="nav-list">
+                    <img src="/images/ncs-suit-stacked.png" alt="" class="logo" height="45px">
+                    <div class="mobile-toggle-container">
+                        <button id="mobile-nav-toggle" class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="nav-items">
+                        <li class="nav-item"><a class="nav-item-link" href="#"><img src="images/notification-bell.svg" alt="notifications" width="25px" height="25px"></a></li>
+                        <li class="nav-item"><a class="nav-item-link" href="#"><img src="images/settings.svg" alt="settings" width="25px" height="25px"></a></li>
+                        <li class="nav-item"><a class="nav-item-link" href="#"><span class="circle-blue">JP</span></a></li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
         <nav id="side-nav" class="side-navigation">
             <ul class="side-nav-list">
                 <li class="side-nav-item active-item"><a href="#" class="side-nav-link"><img src="images/dashboard-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Dashboard</a></li>

@@ -17,6 +17,8 @@
     --transparent-yellow-color: rgba(255, 165, 0, .25);
     --gray-700-color: #7E7E7E;
     --border: 1px var(--main-border-color) solid;
+    --nav-height: 83px;
+    --side-nav-width: 247px;
 }
 
 * {
@@ -56,6 +58,8 @@ ul {
 }
 
 .primary-navigation {
+    position: fixed;
+    width: 100%;
     background-color: var(--white-color);
     border-bottom: var(--border);
 }
@@ -63,7 +67,7 @@ ul {
 .nav-list {
     display: flex;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin: 0;
     justify-content: space-between;
     align-items: center;
@@ -77,8 +81,9 @@ ul {
 }
 
 .side-navigation {
-    position: absolute;
-    max-width: 247px;
+    position: fixed;
+    max-width: var(--side-nav-width);
+    margin-top: var(--nav-height);
     width: 100%;
     min-height: 100%;
     border-right: 1px var(--main-border-color) solid;
@@ -127,8 +132,7 @@ ul {
 
 .main-content {
     min-height: 100vh;
-    margin-left: 247px;
-    padding: 1rem;
+    padding: calc(var(--nav-height) + 2rem) 2rem 2rem calc(var(--side-nav-width) + 2rem);
     background-color: transparent;
 }
 
@@ -172,6 +176,7 @@ ul {
 }
 
 .footer-navigation {
+    margin-left: var(--side-nav-width);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -183,6 +188,10 @@ ul {
 .footer-navigation a {
     color: var(--white-color);
     font-size: 0.8rem;
+}
+
+.footer-navigation a {
+    text-decoration: underline;
 }
 
 .footer-navigation ul {
@@ -316,6 +325,20 @@ ul {
     font-size: 1rem;
 }
 
+.circle-blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-blue-color);
+    border-radius: 50%;
+    padding: 0.5rem;
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
 /* Navigation */
 .hamburger {
 	display: none;
@@ -388,7 +411,7 @@ ul {
 
 @media screen and (max-width: 845px) {
     .main-content {
-        margin: 0;
+        padding: calc(var(--nav-height) + 1rem) 1rem 1rem 1rem;
     }
     
     .hamburger {
