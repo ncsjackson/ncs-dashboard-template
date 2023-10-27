@@ -384,6 +384,11 @@ ul {
     font-weight: 500;
 }
 
+.hyperlink {
+    color: var(--secondary-blue-color);
+    text-decoration: underline;
+}
+
 .transparent-green {
     background-color: var(--transparent-green-color);
 }
@@ -413,6 +418,13 @@ ul {
     .main-content {
         padding: calc(var(--nav-height) + 1rem) 1rem 1rem 1rem;
     }
+
+    .logo-ham {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 1rem;
+    }
     
     .hamburger {
         z-index: 9999;
@@ -434,6 +446,10 @@ ul {
         transform: translateX(0%);
         max-width: 100%;
         width: 100%;
+    }
+
+    .footer-navigation {
+        margin: 0;
     }
 }
 
