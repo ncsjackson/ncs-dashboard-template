@@ -4,119 +4,225 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
 	<title>NCS Client Dash</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link rel="stylesheet" href="main.css" />
 </head>
 <body>
-    <div class="sidenav-main-wrapper">
-        <header>
+    <div class="layout-container">
+        <header class="layout-container__header">
             <nav class="primary-navigation">
-                <ul class="nav-list">
-                    <div class="logo-ham">
-                        <img src="images/ncs-suit-stacked.png" alt="" class="logo" height="45px">
-                        <div class="mobile-toggle-container">
-                            <button id="mobile-nav-toggle" class="hamburger">
+                <ul class="primary-navigation__list">
+                    <div class="primary-navigation__logo-container">
+                        <img src="images/ncs-suit-stacked.png" alt="" class="primary-navigation__logo-image" height="45px">
+                        <div class="primary-navigation__mobile-toggle-container">
+                            <button id="mobile-nav-toggle" class="primary-navigation__hamburger">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </button>
                         </div>
                     </div>
-                    <div class="nav-items">
-                        <li class="nav-item"><a class="nav-item-link" href="#"><img src="images/notification-bell.svg" alt="notifications" width="25px" height="25px"></a></li>
-                        <li class="nav-item"><a class="nav-item-link" href="#"><img src="images/settings.svg" alt="settings" width="25px" height="25px"></a></li>
-                        <li class="nav-item"><a class="nav-item-link" href="#"><span class="circle-blue">JP</span></a></li>
+                    <div class="primary-navigation__nav-items">
+                        <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link" href="#"><img src="images/notification-bell.svg" alt="notifications" width="25px" height="25px"></a></li>
+                        <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link" href="#"><img src="images/settings.svg" alt="settings" width="25px" height="25px"></a></li>
+                        <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link" href="#"><span class="primary-navigation__circle primary-navigation__circle--blue">JP</span></a></li>
                     </div>
                 </ul>
             </nav>
         </header>
         <nav id="side-nav" class="side-navigation">
-            <ul class="side-nav-list">
-                <li class="side-nav-item active-item"><a href="#" class="side-nav-link"><img src="images/dashboard-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Dashboard</a></li>
-                <li class="side-nav-item"><a href="#" class="side-nav-link"><img src="images/searches-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Searches</a></li>
-                <li class="side-nav-item"><a href="#" class="side-nav-link"><img src="images/applicants-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Applicants</a></li>
-                <li class="side-nav-item"><a href="#" class="side-nav-link"><img src="images/invoice-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Invoices</a></li>
-                <li class="side-nav-item"><a href="#" class="side-nav-link"><img src="images/cm-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Continuous Monitoring</a></li>
-                <li class="side-nav-item"><a href="#" class="side-nav-link"><img src="images/bulk-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Bulk Uploads</a></li>
-                <li class="side-nav-item"><a href="#" class="side-nav-link"><img src="images/services-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Setup New Services</a></li>
-                <li class="side-nav-item"><a href="#" class="side-nav-link"><img src="images/connect-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Connect Accounts</a></li>
-                <li class="side-nav-item"><a href="#" class="side-nav-link"><img src="images/help-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Help Center</a></li>
+            <ul class="side-navigation__list">
+                <li class="side-navigation__nav-item active-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/dashboard-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Dashboard</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/searches-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Searches</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/applicants-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Applicants</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/invoice-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Invoices</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/cm-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Continuous Monitoring</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/bulk-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Bulk Uploads</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/services-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Setup New Services</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/connect-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Connect Accounts</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/help-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Help Center</a></li>
             </ul>
         </nav>
         <main class="main-content">
-            <div class="content-top">
-                <h1>Dashboard</h1>
+            <div class="content-head">
+                <h1 class="content-head__title">Dashboard</h1>
                 <button class="button button-primary button-large">Start New Search</button>
             </div>
             <div class="widget-tiles">
-                <div class="tile">
-                    <p class="tile-num">24</p>
-                    <p class="tile-description">Completed Searches</p>
+                <div class="widget-tiles__tile">
+                    <div class="widget-tiles__tile-content">
+                        <p class="widget-tiles__tile-number">31</p>
+                        <p class="widget-tiles__tile-description">Total Applicants</p>
+                    </div>
+                    <div class="widget-tiles__tile-image-container widget-tiles__tile-image-container--blue">
+                        <img src="images/blue-person-icon.svg" class="widget-tiles__tile-image" alt="icon of a person" aria-hidden="true" width="30" height="30">
+                    </div>
                 </div>
-                <div class="tile">
-                    <p class="tile-num">2</p>
-                    <p class="tile-description">Pending Searches</p>
+                <div class="widget-tiles__tile">
+                    <div class="widget-tiles__tile-content">
+                        <p class="widget-tiles__tile-number">24</p>
+                        <p class="widget-tiles__tile-description">Completed Searches</p>
+                    </div>
+                    <div class="widget-tiles__tile-image-container widget-tiles__tile-image-container--green">
+                        <img src="images/green-search-icon.svg" class="widget-tiles__tile-image" alt="icon of a magnifying glass" aria-hidden="true" width="30" height="30">
+                    </div>
                 </div>
-                <div class="tile">
-                    <p class="tile-num">3</p>
-                    <p class="tile-description">Searches with Hits</p>
+                <div class="widget-tiles__tile">
+                    <div class="widget-tiles__tile-content">
+                        <p class="widget-tiles__tile-number">2</p>
+                        <p class="widget-tiles__tile-description">Pending Searches</p>
+                    </div>
+                    <div class="widget-tiles__tile-image-container widget-tiles__tile-image-container--orange">
+                        <img src="images/orange-clock-icon.svg" class="widget-tiles__tile-image" alt="icon of a clock" aria-hidden="true" width="30" height="30">
+                    </div>
                 </div>
-                <div class="tile">
-                    <p class="tile-num">31</p>
-                    <p class="tile-description">Total Applicants</p>
+                <div class="widget-tiles__tile">
+                    <div class="widget-tiles__tile-content">
+                        <p class="widget-tiles__tile-number">3</p>
+                        <p class="widget-tiles__tile-description">Searches Needing Review</p>
+                    </div>
+                    <div class="widget-tiles__tile-image-container widget-tiles__tile-image-container--red">
+                        <img src="images/red-exclamation-icon.svg" class="widget-tiles__tile-image" alt="icon of an exclamation mark" aria-hidden="true" width="30" height="30">
+                    </div>
                 </div>
             </div>
-            <div class="wrapper bordered">
+            <div class="content-container">
                 <nav class="tabs-navigation">
-                    <ul class="tab-list">
-                        <li class="tab-item tab-active">Searches</li>
-                        <li class="tab-item">Applicants</li>
+                    <ul class="tabs-navigation__list">
+                        <li class="tabs-navigation__nav-item tab-active">Searches</li>
+                        <li class="tabs-navigation__nav-item">Applicants</li>
                     </ul>
                 </nav>
                 <div class="tab-content">
-                    <div class="tab-content-head">
-                        <h2>Recent Searches</h2>
+                    <div class="tab-content__head">
+                        <h2 class="tab-content__title">Recent Searches</h2>
                     </div>
-                    <div class="table-container">
+                    <div class="table-container table-container--margin-top">
                         <table class="table">
-                            <tr class="table-head">
-                                <th>Status</th>
-                                <th>Package Name</th>
-                                <th>Applicant</th>
-                                <th>Date Ordered</th>
-                                <th>Action</th>
+                            <tr class="table__head">
+                                <th class="table__heading">Status</th>
+                                <th class="table__heading">Package Name</th>
+                                <th class="table__heading">Applicant</th>
+                                <th class="table__heading">Date Ordered</th>
+                                <th class="table__heading">Action</th>
                             </tr>
                             <tr>
-                                <td><span class="status transparent-green">Complete</span></td>
+                                <td>
+                                    <div class="table__row-status">
+                                        <span class="dot dot--green"></span>
+                                        Complete
+                                    </div>
+                                </td>
                                 <td>MVR Report</td>
                                 <td>Jim Lahey</td>
                                 <td>9/18/2023 10:45am</td>
                                 <td><button class="button button-light button-action">View Search</button></td>
                             </tr>
                             <tr>
-                                <td><span class="status transparent-red">Review</span></td>
+                                <td>
+                                    <div class="table__row-status">
+                                        <span class="dot dot--red"></span>
+                                        Review
+                                    </div>
+                                </td>
                                 <td>CBSV SSA ID Validation</td>
                                 <td>Jim Lahey</td>
                                 <td>9/18/2023 10:45am</td>
                                 <td><button class="button button-light button-action">View Search</button></td>
                             </tr>
                             <tr>
-                                <td><span class="status transparent-green">Complete</span></td>
+                                <td>
+                                    <div class="table__row-status">
+                                        <span class="dot dot--green"></span>
+                                        Complete
+                                    </div>
+                                </td>
                                 <td>National Quick Check</td>
                                 <td>Jim Lahey</td>
                                 <td>9/18/2023 10:45am</td>
                                 <td><button class="button button-light button-action">View Search</button></td>
                             </tr>
                             <tr>
-                                <td><span class="status transparent-yellow">Pending</span></td>
+                                <td>
+                                    <div class="table__row-status">
+                                        <span class="dot dot--orange"></span>
+                                        Pending
+                                    </div>
+                                </td>
                                 <td>County Criminal - Manual</td>
                                 <td>Jim Lahey</td>
                                 <td>9/18/2023 10:45am</td>
                                 <td><button class="button button-light button-action">View Search</button></td>
                             </tr>
                             <tr>
-                                <td><span class="status transparent-green">Complete</span></td>
+                                <td>
+                                    <div class="table__row-status">
+                                        <span class="dot dot--green"></span>
+                                        Complete
+                                    </div>
+                                </td>
+                                <td>Enhanced</td>
+                                <td>Jim Lahey</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td><button class="button button-light button-action">View Search</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table__row-status">
+                                        <span class="dot dot--green"></span>
+                                        Complete
+                                    </div>
+                                </td>
+                                <td>MVR Report</td>
+                                <td>Jim Lahey</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td><button class="button button-light button-action">View Search</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table__row-status">
+                                        <span class="dot dot--red"></span>
+                                        Review
+                                    </div>
+                                </td>
+                                <td>CBSV SSA ID Validation</td>
+                                <td>Jim Lahey</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td><button class="button button-light button-action">View Search</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table__row-status">
+                                        <span class="dot dot--green"></span>
+                                        Complete
+                                    </div>
+                                </td>
+                                <td>National Quick Check</td>
+                                <td>Jim Lahey</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td><button class="button button-light button-action">View Search</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table__row-status">
+                                        <span class="dot dot--orange"></span>
+                                        Pending
+                                    </div>
+                                </td>
+                                <td>County Criminal - Manual</td>
+                                <td>Jim Lahey</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td><button class="button button-light button-action">View Search</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="table__row-status">
+                                        <span class="dot dot--green"></span>
+                                        Complete
+                                    </div>
+                                </td>
                                 <td>Enhanced</td>
                                 <td>Jim Lahey</td>
                                 <td>9/18/2023 10:45am</td>
@@ -124,9 +230,9 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="table-footer">
-                        <p>Showing 10 of 28 searches</p>
-                        <a href="#" class="hyperlink">View all searches</a>
+                    <div class="table__footer">
+                        <p class="table__footer-caption">Showing 10 of 28 searches</p>
+                        <a href="#" class="button button-light">See All Searches</a>
                     </div>
                 </div>
             </div>
