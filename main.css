@@ -324,7 +324,7 @@ ul {
     flex-wrap: wrap;
     gap: 1rem;
     border-top: var(--border);
-    padding-top: 1rem;
+    padding: 1rem 1rem 0 1rem;
 }
 
 .table__footer-caption {
@@ -370,6 +370,18 @@ ul {
     background-color: #d1d5db;
     border: 1px #d1d5db solid;
     box-shadow: none;
+}
+
+.button-dark {
+    background-color: #eef2f7;
+    padding: 10px 20px;
+    color: black;
+    box-shadow: 0 1px 1px rgba(0,0,0,.075);
+    transition: all 0.3s ease;
+}
+
+.button-dark:hover {
+    background-color: #d1d5db;
 }
 
 .button-action {
