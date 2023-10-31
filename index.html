@@ -25,7 +25,41 @@
                         </div>
                     </div>
                     <div class="primary-navigation__nav-items">
-                        <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link" href="#"><img src="images/notification-bell.svg" alt="notifications" width="25px" height="25px"></a></li>
+                        <li class="primary-navigation__nav-item primary-navigation__nav-item--relative">
+                            <button id="notification-button" class="primary-navigation__nav-item-button" aria-controls="notification-menu">
+                                <img src="images/notification-bell.svg" alt="notifications" width="25px" height="25px">
+                            </button>
+                            <div id="notification-menu" class="primary-navigation__notification-menu" aria-expanded="false" data-visible="false">
+                                <div class="primary-navigation__notification-menu-header">
+                                    <p class="primary-navigation__notification-menu-title">Notifications</p>
+                                </div>
+                                <div class="primary-navigation__notification-menu-body">
+                                    <ul class="primary-navigation__notification-menu-list">
+                                        <li class="primary-navigation__notification-menu-item">
+                                            Applicant form received for Tony Soprano
+                                            <span class="primary-navigation__notification-menu-item-timestamp">
+                                                Jun 02, 2022 2:07pm
+                                            </span>
+                                        </li>
+                                        <li class="primary-navigation__notification-menu-item">
+                                            Applicant form received for Tony Soprano
+                                            <span class="primary-navigation__notification-menu-item-timestamp">
+                                                Jun 02, 2022 2:07pm
+                                            </span>
+                                        </li>
+                                        <li class="primary-navigation__notification-menu-item">
+                                            Applicant form received for Tony Soprano
+                                            <span class="primary-navigation__notification-menu-item-timestamp">
+                                                Jun 02, 2022 2:07pm
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="primary-navigation__notification-menu-footer">
+                                    <a href="#" class="primary-navigation__notification-menu-link">View All</a>
+                                </div>
+                            </div>
+                        </li>
                         <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link" href="#"><img src="images/settings.svg" alt="settings" width="25px" height="25px"></a></li>
                         <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link" href="#"><span class="primary-navigation__circle primary-navigation__circle--blue">JP</span></a></li>
                     </div>
@@ -81,7 +115,7 @@
                 <div class="widget-tiles__tile">
                     <div class="widget-tiles__tile-content">
                         <p class="widget-tiles__tile-number">3</p>
-                        <p class="widget-tiles__tile-description">Searches Needing Review</p>
+                        <p class="widget-tiles__tile-description">Searches Need Review</p>
                     </div>
                     <div class="widget-tiles__tile-image-container widget-tiles__tile-image-container--red">
                         <img src="images/red-exclamation-icon.svg" class="widget-tiles__tile-image" alt="icon of an exclamation mark" aria-hidden="true" width="30" height="30">
@@ -190,7 +224,9 @@
                                 <td>CBSV SSA ID Validation</td>
                                 <td>Jim Lahey</td>
                                 <td>9/18/2023 10:45am</td>
-                                <td><button class="button button-light button-action">View Search</button></td>
+                                <td>
+                                    <button class="button button-light button-action">View Search</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -276,7 +312,33 @@
             return { init }
         })();
 
+        const Notifications = (() => {
+            const notificationMenu = document.getElementById('notification-menu');
+            const notificationButton = document.getElementById('notification-button');
+
+            const _isVisible = () => notificationMenu.getAttribute('data-visible') === 'true';
+
+            const _bindEvents = () => {
+                notificationButton.addEventListener('click', function() {
+                    if (_isVisible()) {
+                        notificationMenu.setAttribute('data-visible', 'false');
+                        notificationMenu.setAttribute('aria-expanded', 'false');
+                    } else {
+                        notificationMenu.setAttribute('data-visible', 'true');
+                        notificationMenu.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+
+            const init = () => {
+                _bindEvents();
+            }
+
+            return { init }
+        })();
+
         SideBar.init();
+        Notifications.init();
     </script>
 </body>
 </html>

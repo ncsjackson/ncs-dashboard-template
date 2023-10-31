@@ -81,6 +81,77 @@ ul {
     gap: 1.5rem; 
 }
 
+
+.primary-navigation__nav-item--relative {
+    position: relative;
+}
+
+.primary-navigation__notification-menu {
+    position: absolute;
+    display: none;
+    border: var(--border);
+    margin-top: 1.8rem;
+    top: 100%;
+    right: 0;
+    height: auto;
+    border-radius: 0 0 10px 10px;
+    min-width: 25rem;
+    background-color: var(--white-color);
+    box-shadow: var(--shadow-2);
+}
+
+.primary-navigation__notification-menu[data-visible="true"] {
+    display: block;
+}
+
+.primary-navigation__nav-item-button {
+    border: none;
+    background-color: transparent;
+}
+
+.primary-navigation__notification-menu-header {
+    padding: 1.25rem 1.25rem 0 1.25rem;
+}
+
+.primary-navigation__notification-menu-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.primary-navigation__notification-menu-list {
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.primary-navigation__notification-menu-item {
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+}
+
+.primary-navigation__notification-menu-item:hover {
+    background-color: rgb(249, 250, 251);
+}
+
+.primary-navigation__notification-menu-item-timestamp {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    color: var(--gray-700-color);
+}
+
+.primary-navigation__notification-menu-link {
+    display: block;
+    border-top: 1px var(--main-border-color) solid;
+    color: var(--secondary-blue-color);
+    padding: 1rem;
+    margin-top: 1.25rem;
+    text-align: center;
+}
+
+.primary-navigation__notification-menu-link:hover {
+    background-color: var(--active-blue-color);
+}
+
 .side-navigation {
     position: fixed;
     max-width: var(--side-nav-width);
@@ -374,7 +445,7 @@ ul {
 
 .button-dark {
     background-color: #eef2f7;
-    padding: 10px 20px;
+    padding: 10px;
     color: black;
     box-shadow: 0 1px 1px rgba(0,0,0,.075);
     transition: all 0.3s ease;
@@ -495,6 +566,10 @@ ul {
         align-items: center;
         gap: 1rem;
     }
+
+    .primary-navigation__list {
+        padding: 1rem;
+    }
     
     .primary-navigation__hamburger {
         z-index: 9999;
@@ -533,5 +608,14 @@ ul {
 @media screen and (max-width: 572px) {
     .footer-nav-list {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 541px) {
+    .primary-navigation__notification-menu {
+        top: 100%;
+        right: -5rem;
+        min-width: 300px;
+        max-width: 360px;
     }
 }
