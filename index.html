@@ -323,9 +323,19 @@
                     if (_isVisible()) {
                         notificationMenu.setAttribute('data-visible', 'false');
                         notificationMenu.setAttribute('aria-expanded', 'false');
+                        notificationMenu.classList.toggle('slide-up');
                     } else {
                         notificationMenu.setAttribute('data-visible', 'true');
                         notificationMenu.setAttribute('aria-expanded', 'true');
+                        notificationMenu.classList.toggle('slide-up');  
+                    }
+                });
+
+                document.body.addEventListener('click', function(event) {
+                    if (!notificationMenu.contains(event.target) && !notificationButton.contains(event.target) && _isVisible()) {
+                        notificationMenu.setAttribute('data-visible', 'false');
+                        notificationMenu.setAttribute('aria-expanded', 'false');    
+                        notificationMenu.classList.toggle('slide-up');               
                     }
                 });
             }

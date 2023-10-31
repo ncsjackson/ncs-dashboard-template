@@ -619,3 +619,18 @@ ul {
         max-width: 360px;
     }
 }
+
+@keyframes slide-up {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-up {
+    animation: slide-up 0.2s ease-in-out;
+}
