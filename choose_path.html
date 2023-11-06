@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+	<title>NCS Client Dash</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="layout-container">
+        <header class="layout-container__header">
+            <nav class="primary-navigation">
+                <ul class="primary-navigation__list">
+                    <div class="primary-navigation__logo-container">
+                        <img src="images/ncs-suit-stacked.png" alt="" class="primary-navigation__logo-image" height="45px">
+                        <div class="primary-navigation__mobile-toggle-container">
+                            <button id="mobile-nav-toggle" class="primary-navigation__hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="primary-navigation__nav-items">
+                        <li class="primary-navigation__nav-item primary-navigation__nav-item--relative">
+                            <button id="notification-button" class="primary-navigation__nav-item-button" aria-controls="notification-menu">
+                                <img src="images/notification-bell.svg" alt="notifications" width="25px" height="25px">
+                            </button>
+                            <div id="notification-menu" class="primary-navigation__notification-menu" aria-expanded="false" data-visible="false">
+                                <div class="primary-navigation__notification-menu-header">
+                                    <p class="primary-navigation__notification-menu-title">Notifications</p>
+                                </div>
+                                <div class="primary-navigation__notification-menu-body">
+                                    <ul class="primary-navigation__notification-menu-list">
+                                        <li class="primary-navigation__notification-menu-item">
+                                            Applicant form received for Tony Soprano
+                                            <span class="primary-navigation__notification-menu-item-timestamp">
+                                                Jun 02, 2022 2:07pm
+                                            </span>
+                                        </li>
+                                        <li class="primary-navigation__notification-menu-item">
+                                            Applicant form received for Tony Soprano
+                                            <span class="primary-navigation__notification-menu-item-timestamp">
+                                                Jun 02, 2022 2:07pm
+                                            </span>
+                                        </li>
+                                        <li class="primary-navigation__notification-menu-item">
+                                            Applicant form received for Tony Soprano
+                                            <span class="primary-navigation__notification-menu-item-timestamp">
+                                                Jun 02, 2022 2:07pm
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="primary-navigation__notification-menu-footer">
+                                    <a href="#" class="primary-navigation__notification-menu-link">View All</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link" href="#"><img src="images/settings.svg" alt="settings" width="25px" height="25px"></a></li>
+                        <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link" href="#"><span class="primary-navigation__circle primary-navigation__circle--blue">JP</span></a></li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        <nav id="side-nav" class="side-navigation">
+            <ul class="side-navigation__list">
+                <li class="side-navigation__nav-item"><a href="index.html" class="side-navigation__nav-item-link"><img src="images/dashboard-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Dashboard</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/searches-icon.svg" alt="searches icon" aria-hidden="true" width="20px" height="20px">Searches</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/applicants-icon.svg" alt="applicants icon" aria-hidden="true" width="20px" height="20px">Applicants</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/invoice-icon.svg" alt="invoice icon" aria-hidden="true" width="20px" height="20px">Invoices</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/cm-icon.svg" alt="continuous monitoring icon" aria-hidden="true" width="20px" height="20px">Continuous Monitoring</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/bulk-icon.svg" alt="bulk orders icon" aria-hidden="true" width="20px" height="20px">Bulk Uploads</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/services-icon.svg" alt="set up new services icon" aria-hidden="true" width="20px" height="20px">Setup New Services</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/connect-icon.svg" alt="connect accounts icon" aria-hidden="true" width="20px" height="20px">Connect Accounts</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/help-icon.svg" alt="help center icon" aria-hidden="true" width="20px" height="20px">Help Center</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <div class="content-head">
+                <h1 class="content-head__title">Select or create an applicant</h1>
+            </div>
+            <div class="content-container">
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <a href="#" class="button button-primary button-large">Create New Applicant</a>
+                </div>
+                <div class="divider">
+                    <div class="divider__line"></div>
+                    <p class="divider__text">OR</p>
+                    <div class="divider__line"></div>
+                </div>
+                <div class="table-container table-container--margin-top">
+                    <table class="table">
+                        <tr class="table__head">
+                            <th class="table__heading">ID</th>
+                            <th class="table__heading">Applicant Name</th>
+                            <th class="table__heading">Created On</th>
+                            <th class="table__heading"></th>
+                        </tr>
+                        <tr>
+                            <td>123456</td>
+                            <td>Jerry Seinfeld</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td class="table__data table__data--flexed">
+                                <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123456</td>
+                            <td>George Costanza</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td class="table__data table__data--flexed">
+                                <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123456</td>
+                            <td>Mitch Hedberg</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td class="table__data table__data--flexed">
+                                <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123456</td>
+                            <td>Shane Gillis</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td class="table__data table__data--flexed">
+                                <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123456</td>
+                            <td>Mark Normand</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td class="table__data table__data--flexed">
+                                <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123456</td>
+                            <td>Bill Burr</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td class="table__data table__data--flexed">
+                                <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123456</td>
+                            <td>Joey Diaz</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td class="table__data table__data--flexed">
+                                <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123456</td>
+                            <td>Ryan Sickler</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td class="table__data table__data--flexed">
+                                <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123456</td>
+                            <td>Theo Von</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td class="table__data table__data--flexed">
+                                <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>123456</td>
+                            <td>Kurt Metzger</td>
+                            <td>9/18/2023 10:45am</td>
+                            <td class="table__data table__data--flexed">
+                                <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table__footer">
+                    <p class="table__footer-caption">Showing 10 of 28 applicants</p>
+                    <a href="#" class="button button-light button-large">View all <img src="images/arrow-right.svg" alt="" width="20" height="20"></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer-navigation">
+        <p>@2023 <span class="bold-500">National Crime Search</span></p>
+        <ul class="footer-nav-list">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">support@nationalcrimesearch.com</a></li>
+            <li><a href="#">(888) 527-3282</a></li>
+        </ul>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        // Handles sidebar navigation interactivity
+        const SideBar = (() => {
+            const sideNavigation = {
+                get: document.getElementById('side-nav'),
+                navToggle: document.getElementById('mobile-nav-toggle'),
+            }
+
+            const _isVisible = () => sideNavigation.get.getAttribute('data-visible') === 'true';
+
+            const _bindEvents = () => {
+                sideNavigation.navToggle.addEventListener('click', function() {
+                    if (_isVisible()) {
+                        sideNavigation.get.setAttribute('data-visible', 'false');
+                        sideNavigation.navToggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        sideNavigation.get.setAttribute('data-visible', 'true');
+                        sideNavigation.navToggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+
+            const init = () => {
+                _bindEvents();
+            }
+
+            return { init }
+        })();
+
+        // Handles notification menu interactivity
+        const Notifications = (() => {
+            const notificationMenu = document.getElementById('notification-menu');
+            const notificationButton = document.getElementById('notification-button');
+
+            const _isVisible = () => notificationMenu.getAttribute('data-visible') === 'true';
+
+            const _bindEvents = () => {
+                notificationButton.addEventListener('click', function() {
+                    if (_isVisible()) {
+                        notificationMenu.setAttribute('data-visible', 'false');
+                        notificationMenu.setAttribute('aria-expanded', 'false');
+                        notificationMenu.classList.toggle('slide-up');
+                    } else {
+                        notificationMenu.setAttribute('data-visible', 'true');
+                        notificationMenu.setAttribute('aria-expanded', 'true');
+                        notificationMenu.classList.toggle('slide-up');  
+                    }
+                });
+
+                document.body.addEventListener('click', function(event) {
+                    if (!notificationMenu.contains(event.target) && !notificationButton.contains(event.target) && _isVisible()) {
+                        notificationMenu.setAttribute('data-visible', 'false');
+                        notificationMenu.setAttribute('aria-expanded', 'false');    
+                        notificationMenu.classList.toggle('slide-up');               
+                    }
+                });
+            }
+
+            const init = () => {
+                _bindEvents();
+            }
+
+            return { init }
+        })();
+        SideBar.init();
+        Notifications.init();
+    </script>
+</body>
+</html>
