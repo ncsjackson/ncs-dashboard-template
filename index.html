@@ -69,14 +69,14 @@
         <nav id="side-nav" class="side-navigation">
             <ul class="side-navigation__list">
                 <li class="side-navigation__nav-item active-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/dashboard-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Dashboard</a></li>
-                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/searches-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Searches</a></li>
-                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/applicants-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Applicants</a></li>
-                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/invoice-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Invoices</a></li>
-                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/cm-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Continuous Monitoring</a></li>
-                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/bulk-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Bulk Uploads</a></li>
-                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/services-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Setup New Services</a></li>
-                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/connect-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Connect Accounts</a></li>
-                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/help-icon.svg" alt="dashboard icon" aria-hidden="true" width="20px" height="20px">Help Center</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/searches-icon.svg" alt="searches icon" aria-hidden="true" width="20px" height="20px">Searches</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/applicants-icon.svg" alt="applicants icon" aria-hidden="true" width="20px" height="20px">Applicants</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/invoice-icon.svg" alt="invoice icon" aria-hidden="true" width="20px" height="20px">Invoices</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/cm-icon.svg" alt="continuous monitoring icon" aria-hidden="true" width="20px" height="20px">Continuous Monitoring</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/bulk-icon.svg" alt="bulk orders icon" aria-hidden="true" width="20px" height="20px">Bulk Uploads</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/services-icon.svg" alt="set up new services icon" aria-hidden="true" width="20px" height="20px">Setup New Services</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/connect-icon.svg" alt="connect accounts icon" aria-hidden="true" width="20px" height="20px">Connect Accounts</a></li>
+                <li class="side-navigation__nav-item"><a href="#" class="side-navigation__nav-item-link"><img src="images/help-icon.svg" alt="help center icon" aria-hidden="true" width="20px" height="20px">Help Center</a></li>
             </ul>
         </nav>
         <main class="main-content">
@@ -124,12 +124,12 @@
             </div>
             <div class="content-container">
                 <nav class="tabs-navigation">
-                    <ul class="tabs-navigation__list">
-                        <li class="tabs-navigation__nav-item tab-active">Searches</li>
-                        <li class="tabs-navigation__nav-item">Applicants</li>
-                    </ul>
+                    <div class="tabs-navigation__nav-items">
+                        <button class="tabs-navigation__nav-item tabs-navigation__nav-item--active" data-target="tab-content-1"><img src="images/searches-icon.svg" alt="searches icon" aria-hidden="true" width="20px" height="20px">Searches</button>
+                        <button class="tabs-navigation__nav-item" data-target="tab-content-2"><img src="images/applicants-icon.svg" alt="applicants icon" aria-hidden="true" width="20px" height="20px">Applicants</button>
+                    </div>
                 </nav>
-                <div class="tab-content">
+                <div id="tab-content-1" class="tab-content tab-content--active fade-in">
                     <div class="tab-content__head">
                         <h2 class="tab-content__title">Recent Searches</h2>
                     </div>
@@ -299,6 +299,105 @@
                         <a href="#" class="button">View all <img src="images/arrow-right.svg" alt="" width="20" height="20"></a>
                     </div>
                 </div>
+                <div id="tab-content-2" class="tab-content">
+                    <div class="tab-content__head">
+                        <h2 class="tab-content__title">Recent Applicants</h2>
+                    </div>
+                    <div class="table-container table-container--margin-top">
+                        <table class="table">
+                            <tr class="table__head">
+                                <th class="table__heading">ID</th>
+                                <th class="table__heading">Applicant Name</th>
+                                <th class="table__heading">Created On</th>
+                                <th class="table__heading"></th>
+                            </tr>
+                            <tr>
+                                <td>123456</td>
+                                <td>Tom Segura</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td class="table__data table__data--flexed">
+                                    <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> View applicant</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123456</td>
+                                <td>Jerry Seinfeld</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td class="table__data table__data--flexed">
+                                    <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> View applicant</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123456</td>
+                                <td>Mitch Hedberg</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td class="table__data table__data--flexed">
+                                    <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> View applicant</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123456</td>
+                                <td>Shane Gillis</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td class="table__data table__data--flexed">
+                                    <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> View applicant</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123456</td>
+                                <td>Mark Normand</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td class="table__data table__data--flexed">
+                                    <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> View applicant</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123456</td>
+                                <td>Bill Burr</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td class="table__data table__data--flexed">
+                                    <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> View applicant</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123456</td>
+                                <td>Joey Diaz</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td class="table__data table__data--flexed">
+                                    <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> View applicant</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123456</td>
+                                <td>Ryan Sickler</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td class="table__data table__data--flexed">
+                                    <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> View applicant</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123456</td>
+                                <td>Theo Von</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td class="table__data table__data--flexed">
+                                    <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> View applicant</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>123456</td>
+                                <td>Kurt Metzger</td>
+                                <td>9/18/2023 10:45am</td>
+                                <td class="table__data table__data--flexed">
+                                    <a class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> View applicant</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table__footer">
+                        <p class="table__footer-caption">Showing 10 of 28 applicants</p>
+                        <a href="#" class="button">View all <img src="images/arrow-right.svg" alt="" width="20" height="20"></a>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
@@ -377,6 +476,56 @@
             return { init }
         })();
 
+        const TabsManager = (() => {
+            const tabs = document.querySelectorAll('.tabs-navigation__nav-item');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            const hideAllTabs = () => {
+                tabs.forEach(tab => {
+                    tab.classList.remove('tabs-navigation__nav-item--active');
+                });
+            };
+
+            const hideAllTabContents = () => {
+                tabContents.forEach(content => {
+                    content.classList.remove('tab-content--active', 'fade-in');
+                });
+            };
+
+            const showTab = (tab) => {
+                tab.classList.add('tabs-navigation__nav-item--active');
+            };
+
+            const showTabContent = (contentId) => {
+                const content = document.getElementById(contentId);
+                if (content) {
+                    content.classList.add('tab-content--active');
+                    content.classList.add('slide-up');
+                }
+            };
+
+            const handleTabClick = (event) => {
+                const targetID = event.currentTarget.getAttribute('data-target');
+                hideAllTabs();
+                hideAllTabContents();
+                showTab(event.currentTarget);
+                showTabContent(targetID);
+            };
+
+            const bindEvents = () => {
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', handleTabClick);
+                });
+            };
+
+            const init = () => {
+                bindEvents();
+            };
+
+            return { init };
+        })();
+
+        TabsManager.init();
         SideBar.init();
         Notifications.init();
     </script>
