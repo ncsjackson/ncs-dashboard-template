@@ -97,7 +97,7 @@ ul {
     border-radius: 0 0 10px 10px;
     min-width: 25rem;
     background-color: var(--white-color);
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow);
 }
 
 .primary-navigation__notification-menu[data-visible="true"] {
@@ -342,15 +342,27 @@ ul {
 .table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: auto;
     border-spacing: 0;
     margin: 0;
+}
+
+.table__data--text-right {
+    text-align: right;
+}
+
+.table__data--flexed {
+    display: flex;
+    gap: 4px;
+    justify-content: end;
+    flex-wrap: wrap;
 }
 
 .table tr:nth-child(even) { 
     background-color: #f9fafb; 
 }
 
-.table td {
+.table__data {
     font-size: 0.9rem;
 }
 
@@ -430,7 +442,7 @@ ul {
 
 .button-light {
     padding: 5px 10px;
-    background-color: var(--white-color);
+    background-color: #f5f7fa;
     border: var(--border);
     color: black;
     box-shadow: 0 1px 1px rgba(0,0,0,.075);
@@ -443,21 +455,8 @@ ul {
     box-shadow: none;
 }
 
-.button-dark {
-    background-color: #eef2f7;
-    padding: 10px;
-    color: black;
-    box-shadow: 0 1px 1px rgba(0,0,0,.075);
-    transition: all 0.3s ease;
-}
-
-.button-dark:hover {
-    background-color: #d1d5db;
-}
-
-.button-action {
-    width: 100%;
-    font-size: 1rem;
+.button-50 {
+    width: 49%;
 }
 
 .primary-navigation__circle {
@@ -617,6 +616,16 @@ ul {
         right: -5rem;
         min-width: 300px;
         max-width: 360px;
+    }
+}
+
+@media screen and (max-width: 1053px) {
+    .table__data--flexed {
+        flex-direction: column;
+    }
+    
+    .table__button-image {
+        display: none;
     }
 }
 
