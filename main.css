@@ -315,6 +315,7 @@ ul {
 .tabs-navigation__nav-item {
     display: flex;
     align-items: center;
+    color: var(--main-text-color);
     gap: 0.5rem;
     border: none;
     background-color: transparent;
