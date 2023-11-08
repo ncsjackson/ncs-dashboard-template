@@ -58,6 +58,10 @@ hr {
     opacity: 1;
 }
 
+label {
+    color: #52525b;
+}
+
 .layout-container {
     position: relative;
 }
