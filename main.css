@@ -793,6 +793,16 @@ label {
     }
 }
 
+@media screen and (max-width: 1172px) {
+    .main-content__flex-container {
+        flex-direction: column;
+    }
+
+    .cart__content-container {
+        position: static;
+    }
+}
+
 @media screen and (max-width: 762px) {
     .footer-navigation {
         flex-direction: column;
