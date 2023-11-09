@@ -125,7 +125,7 @@ label {
     border-radius: 0 0 10px 10px;
     min-width: 25rem;
     background-color: var(--white-color);
-    box-shadow: var(--shadow);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .primary-navigation__notification-menu[data-visible="true"] {
