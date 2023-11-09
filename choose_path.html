@@ -7,7 +7,8 @@
     <meta name="robots" content="noindex">
 	<title>NCS Client Dash</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css" />
 </head>
 <body>
     <div class="layout-container">
@@ -27,11 +28,11 @@
                     <div class="primary-navigation__nav-items">
                         <li class="primary-navigation__nav-item primary-navigation__nav-item--relative">
                             <button id="notification-button" class="primary-navigation__nav-item-button" aria-controls="notification-menu">
-                                <img src="images/notification-bell.svg" alt="notifications" width="25px" height="25px">
+                                <i class="fa-solid fa-envelope primary-navigation__nav-item-button-icon"></i>
                             </button>
                             <div id="notification-menu" class="primary-navigation__notification-menu" aria-expanded="false" data-visible="false">
                                 <div class="primary-navigation__notification-menu-header">
-                                    <p class="primary-navigation__notification-menu-title">Notifications</p>
+                                    <p class="primary-navigation__notification-menu-title">Inbox</p>
                                 </div>
                                 <div class="primary-navigation__notification-menu-body">
                                     <ul class="primary-navigation__notification-menu-list">
@@ -60,7 +61,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link" href="#"><img src="images/settings.svg" alt="settings" width="25px" height="25px"></a></li>
+                        <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link primary-navigation__nav-item-link--flex-center" href="#"><i class="fa-solid fa-gear primary-navigation__nav-item-link-icon"></i></a></li>
                         <li class="primary-navigation__nav-item"><a class="primary-navigation__nav-item-link" href="#"><span class="primary-navigation__circle primary-navigation__circle--blue">JP</span></a></li>
                     </div>
                 </ul>
@@ -80,6 +81,19 @@
             </ul>
         </nav>
         <main class="main-content">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__item">
+                    <p class="breadcrumb__item-name breadcrumbs__item-name--complete">Select an applicant</p>
+                    <img src="/images/arrow-right.svg" alt="" width="20px" height="20px">
+                </div>
+                <div class="breadcrumbs__item">
+                    <p class="breadcrumbs__item-name">Select search packages</p>
+                    <img src="/images/arrow-right.svg" alt="" width="20px" height="20px">
+                </div>
+                <div class="breadcrumbs__item">
+                    <p class="breadcrumbs__item-name">Fill info & finish</p>
+                </div>
+            </div>
             <div class="content-head">
                 <h1 class="content-head__title">Select or create an applicant</h1>
             </div>
@@ -105,7 +119,7 @@
                             <td>Jerry Seinfeld</td>
                             <td>9/18/2023 10:45am</td>
                             <td class="table__data table__data--flexed">
-                                <a href="process_inputs.html" class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
+                                <a href="select_packages.html" class="button button-light"><img src="images/person-icon.svg" class="table__button-image" alt="icon of a person" aria-hidden="true" width="20" height="20"> Select</a>
                             </td>
                         </tr>
                         <tr>
