@@ -826,7 +826,7 @@ label {
 
 .select-packages__item-right {
     justify-content: end;
-    flex-basis: 15rem;
+    flex-basis: 11rem; /* magic number, sorry */
 }
 
 /* breadcrumbs */
