@@ -829,7 +829,6 @@ label {
 
 .select-packages__item-right {
     justify-content: end;
-    flex-basis: 12rem; /* magic number, sorry */
 }
 
 /* breadcrumbs */
@@ -942,6 +941,10 @@ label {
         right: -5rem;
         min-width: 300px;
         max-width: 360px;
+    }
+
+    .select-packages__item-right {
+        flex-basis: 12rem; /* magic number, sorry */
     }
 }
 
