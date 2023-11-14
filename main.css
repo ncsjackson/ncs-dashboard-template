@@ -233,6 +233,12 @@ label {
     color: var(--secondary-blue-color);
 }
 
+.side-navigation__nav-item-link i {
+    font-size: 15px;
+    max-width: 15px;
+    max-height: 15px;
+}
+
 .active-item {
     background-color: var(--active-blue-color);
     border-radius: 5px;
@@ -499,6 +505,7 @@ label {
     font-size: 1rem;
     border: none;
     border-radius: 5px;
+    text-align: center;
 }
 
 .button:hover {
@@ -679,7 +686,8 @@ label {
 }
 
 .cart__content-container {
-    position: fixed;
+    position: sticky;
+    top: calc(var(--nav-height) + 1rem);
     padding: 1.25rem;
     border-radius: 10px;
     background-color: var(--white-color);
@@ -702,6 +710,14 @@ label {
     align-items: center;
 }
 
+.cart__question {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: var(--secondary-blue-color);
+}
+ 
 .cart__title {
     font-size: 1.2rem;
     margin: 0;
@@ -794,6 +810,7 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .select-packages__item-left, 
@@ -801,6 +818,15 @@ label {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.select-packages__item-left {
+    flex: 1;
+}
+
+.select-packages__item-right {
+    justify-content: end;
+    flex-basis: 15rem;
 }
 
 /* breadcrumbs */
@@ -923,6 +949,13 @@ label {
     
     .table__button-image {
         display: none;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .select-packages__item-left, 
+    .select-packages__item-right {
+        gap: 0.5rem
     }
 }
 

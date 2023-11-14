@@ -216,7 +216,7 @@
                             <div class="cart__header-body-container">
                                 <div class="cart__header">
                                     <h2 class="cart__title">Current Cart</h2>
-                                    <p>Have a question?</p>
+                                    <a href="#" class="cart__question"><img src="images/question-circle.svg" alt="icon of question mark" width="20px" height="20px"> Have a question?</a>
                                 </div>
                                 <hr>
                                 <div class="cart__body">
@@ -330,43 +330,7 @@
 
             return { init }
         })();
-
-        // functionality for handling the scroll and position of the cart element
-        const Cart = (() => {
-            const cart = document.querySelector('#scroll-element');
-
-            const _setCartWidth = () => {
-                const referenceWidth = document.querySelector('#width-reference').offsetWidth;
-                cart.style.maxWidth = referenceWidth + 'px';
-            }
-
-            const _handleCartPositioning = () => {
-                const fixedElement = document.querySelector('#scroll-element');
-                const referenceElement = document.querySelector('.main-content__left');
-                const referenceRect = referenceElement.getBoundingClientRect();
-                const scrollTop = window.scrollY;
-
-                if (scrollTop >= (referenceRect.height - 500)) {
-                    fixedElement.classList.add('fixed-scroll-limit');
-                } else {
-                    fixedElement.classList.remove('fixed-scroll-limit');
-                }
-            }
-
-            const _bindEvents = () => {
-                window.addEventListener('scroll', _handleCartPositioning);
-                window.addEventListener('resize', _setCartWidth);
-            }
-
-            const init = () => {
-                _bindEvents();
-                _setCartWidth();
-            }
-
-            return { init }
-        })();
         
-        Cart.init();
         SideBar.init();
         Notifications.init();
     </script>
